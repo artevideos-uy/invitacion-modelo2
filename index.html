@@ -118,7 +118,12 @@ body {
   font-size: clamp(5.2rem, min(14vw, 13vh), 9rem);
   line-height: 0.9;
   color: var(--color-nombre);
-  text-shadow: 0 12px 42px var(--sombra);
+  -webkit-text-stroke: 0.6px rgba(255, 255, 255, 0.28);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35),
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 14px 38px var(--sombra),
+    0 0 24px rgba(255, 255, 255, 0.22);
 }
 
 .mis15 {

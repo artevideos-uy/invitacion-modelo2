@@ -1,3 +1,6 @@
+Claro. Te dejo el `index.html` completo corregido. Toqué solo estilos responsive: el fondo ya no se agranda de más en PC y los textos quedan proporcionados en escritorio sin romper la vista móvil.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -53,8 +56,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   filter: brightness(0.52) contrast(1.08) saturate(1.08);
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .overlay {
@@ -77,19 +81,19 @@ body {
 }
 
 .hero-content {
-  width: min(900px, 100%);
+  width: min(820px, 100%);
 }
 
 .nombrecumpleanera {
   font-family: var(--title-font);
-  font-size: clamp(5.5rem, 16vw, 11rem);
+  font-size: clamp(5.2rem, min(14vw, 13vh), 9rem);
   line-height: 0.9;
   text-shadow: 0 12px 42px var(--sombra);
 }
 
 .mis15 {
   font-family: var(--title-font);
-  font-size: clamp(3.5rem, 9vw, 6.4rem);
+  font-size: clamp(3.4rem, min(8vw, 8vh), 5.2rem);
   color: var(--color-principal);
   line-height: 1;
   margin-top: 10px;
@@ -98,7 +102,7 @@ body {
 .frase-hero,
 .frase-final {
   font-family: var(--title-font);
-  font-size: clamp(2rem, 6vw, 4.8rem);
+  font-size: clamp(2rem, min(5.4vw, 6vh), 3.8rem);
   line-height: 1.05;
   margin-top: 38px;
   text-shadow: 0 10px 34px var(--sombra);
@@ -425,6 +429,53 @@ a.button:hover {
   50% {
     transform: translateY(-4px) scale(1.08);
     filter: drop-shadow(0 0 8px var(--color-principal));
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: clamp(34px, 5vh, 64px) 44px 76px;
+  }
+
+  .hero-content {
+    width: min(760px, 100%);
+  }
+
+  .acciones {
+    margin-top: 26px;
+  }
+
+  .btn,
+  a.button {
+    font-size: 1rem;
+  }
+
+  #info {
+    padding: 18px 28px 52px;
+  }
+
+  .box {
+    width: min(760px, 100%);
+    margin: 18px auto;
+    border-radius: 16px;
+  }
+
+  .box p {
+    font-size: 1.16rem;
+  }
+}
+
+@media (min-width: 900px) and (min-aspect-ratio: 4/3) {
+  .background video {
+    object-fit: contain;
+    transform: none;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.22) 24%, rgba(0, 0, 0, 0.22) 76%, rgba(0, 0, 0, 0.68)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.58)),
+      radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.12), transparent 35%);
   }
 }
 

@@ -129,7 +129,6 @@ body {
   display: block;
   width: fit-content;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .mis15 {
@@ -143,7 +142,6 @@ body {
   display: block;
   width: fit-content;
   margin: 0 auto 18px;
-  overflow: hidden;
 }
 
 .frase-hero,
@@ -155,50 +153,9 @@ body {
   color: var(--color-texto-suelto);
   text-shadow: 0 10px 34px var(--sombra);
 }
-.nombrecumpleanera::after,
-.mis15::after {
-  content: "";
-  position: absolute;
-  top: -12%;
-  left: -35%;
-  width: 35%;
-  height: 130%;
-  background: linear-gradient(
-    115deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0) 25%,
-    rgba(255, 255, 255, 0.75) 50%,
-    rgba(255, 255, 255, 0) 75%,
-    transparent 100%
-  );
-  transform: skewX(-18deg);
-  animation: brilloTexto 4.2s ease-in-out infinite;
-  pointer-events: none;
-}
 
-.mis15::after {
-  animation-delay: 1.2s;
-}
 
-@keyframes brilloTexto {
-  0%, 55% {
-    left: -40%;
-    opacity: 0;
-  }
 
-  65% {
-    opacity: 0.85;
-  }
-
-  82% {
-    opacity: 0;
-  }
-
-  100% {
-    left: 120%;
-    opacity: 0;
-  }
-}
 
 .acciones {
   display: flex;

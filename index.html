@@ -129,6 +129,7 @@ body {
   display: block;
   width: fit-content;
   margin: 0 auto;
+  animation: brilloSuave 3s ease-in-out infinite;
 }
 
 .mis15 {
@@ -142,6 +143,7 @@ body {
   display: block;
   width: fit-content;
   margin: 0 auto 18px;
+  animation: brilloSuave 3s ease-in-out infinite;
 }
 
 .frase-hero,
@@ -213,7 +215,23 @@ margin-left: -28.125vh;
 #info {
   padding: 8px 16px 42px;
 }
+@keyframes brilloSuave {
+  0%, 100% {
+    text-shadow:
+      0 1px 0 rgba(255,255,255,0.35),
+      0 4px 8px rgba(0,0,0,0.35),
+      0 14px 38px rgba(0,0,0,0.28),
+      0 0 15px rgba(255,255,255,0.15);
+  }
 
+  50% {
+    text-shadow:
+      0 1px 0 rgba(255,255,255,0.35),
+      0 4px 8px rgba(0,0,0,0.35),
+      0 14px 38px rgba(0,0,0,0.28),
+      0 0 30px rgba(255,255,255,0.55);
+  }
+}
 .box {
   width: min(880px, 100%);
   margin: 20px auto;
